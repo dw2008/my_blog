@@ -1,11 +1,20 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Sparkles } from 'lucide-react';
+import { useAuth } from '../hooks/useAuth';
+
 export function Navigation() {
   const location = useLocation();
+  const { isAuthenticated } = useAuth();
+
   const isActive = (path: string) => {
-    return location.pathname === path ? 'text-stone-900 font-semibold bg-stone-100' : 'text-stone-600 hover:text-stone-900 hover:bg-stone-50';
+    const currentPath = location.pathname;
+    if (path === '/admin') {
+      return currentPath.startsWith('/admin') ? 'text-stone-900 font-semibold bg-stone-100' : 'text-stone-600 hover:text-stone-900 hover:bg-stone-50';
+    }
+    return currentPath === path ? 'text-stone-900 font-semibold bg-stone-100' : 'text-stone-600 hover:text-stone-900 hover:bg-stone-50';
   };
+
   return <nav className="w-full border-b border-stone-100 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -25,6 +34,11 @@ export function Navigation() {
             <Link to="/me" className={`px-4 py-2 rounded-full text-sm transition-all duration-200 ${isActive('/me')}`}>
               Me
             </Link>
+            {isAuthenticated && (
+              <Link to="/admin" className={`px-4 py-2 rounded-full text-sm transition-all duration-200 ${isActive('/admin')}`}>
+                Admin
+              </Link>
+            )}
           </div>
         </div>
       </div>

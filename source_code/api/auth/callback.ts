@@ -36,7 +36,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }),
     });
 
-    const tokenData = await tokenResponse.json();
+    const tokenData = await tokenResponse.json() as { access_token?: string; error?: string };
 
     if (!tokenData.access_token) {
       return res.redirect('/admin?error=token_exchange_failed');
@@ -50,7 +50,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       },
     });
 
-    const userData = await userResponse.json();
+    const userData = await userResponse.json() as { login?: string; id?: number };
 
     if (!userData.login) {
       return res.redirect('/admin?error=user_fetch_failed');

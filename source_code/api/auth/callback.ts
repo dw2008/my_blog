@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import * as cookie from 'cookie';
+import { parse, serialize } from 'cookie';
 import { generateSessionToken, createSessionCookie } from '../_lib/auth';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -14,7 +14,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   // Verify state matches cookie (CSRF protection)
-  const cookies = cookie.parse(req.headers.cookie || '');
+  const cookies = parse(req.headers.cookie || '');
   const storedState = cookies.oauth_state;
 
   if (!storedState || storedState !== state) {
@@ -70,7 +70,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const sessionCookie = createSessionCookie(sessionToken, isProduction);
 
     // Clear oauth_state cookie
-    const clearStateCookie = cookie.serialize('oauth_state', '', {
+    const clearStateCookie = serialize('oauth_state', '', {
       httpOnly: true,
       secure: isProduction,
       sameSite: 'lax',

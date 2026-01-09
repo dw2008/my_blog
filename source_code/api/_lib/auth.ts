@@ -1,7 +1,7 @@
 import { SignJWT, jwtVerify } from 'jose';
 import type { VercelRequest } from '@vercel/node';
 import type { SessionPayload } from './types';
-import * as cookie from 'cookie';
+import { parse, serialize } from 'cookie';
 
 const SECRET = new TextEncoder().encode(process.env.SESSION_SECRET || 'fallback-secret-key');
 
@@ -25,7 +25,7 @@ export async function verifySessionToken(token: string): Promise<SessionPayload 
 }
 
 export async function validateSession(req: VercelRequest): Promise<{ valid: boolean; username?: string }> {
-  const cookies = cookie.parse(req.headers.cookie || '');
+  const cookies = parse(req.headers.cookie || '');
   const sessionToken = cookies.session;
 
   if (!sessionToken) {
@@ -48,7 +48,7 @@ export async function validateSession(req: VercelRequest): Promise<{ valid: bool
 }
 
 export function createSessionCookie(token: string, isProduction: boolean): string {
-  return cookie.serialize('session', token, {
+  return serialize('session', token, {
     httpOnly: true,
     secure: isProduction,
     sameSite: 'lax',
@@ -58,7 +58,7 @@ export function createSessionCookie(token: string, isProduction: boolean): strin
 }
 
 export function clearSessionCookie(isProduction: boolean): string {
-  return cookie.serialize('session', '', {
+  return serialize('session', '', {
     httpOnly: true,
     secure: isProduction,
     sameSite: 'lax',

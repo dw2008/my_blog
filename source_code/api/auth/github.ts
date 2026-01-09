@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import * as crypto from 'crypto';
-import * as cookie from 'cookie';
+import { randomBytes } from 'crypto';
+import { serialize } from 'cookie';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'GET') {
@@ -8,11 +8,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   // Generate random state for CSRF protection
-  const state = crypto.randomBytes(32).toString('hex');
+  const state = randomBytes(32).toString('hex');
 
   // Store state in temporary cookie
   const isProduction = process.env.NODE_ENV === 'production';
-  res.setHeader('Set-Cookie', cookie.serialize('oauth_state', state, {
+  res.setHeader('Set-Cookie', serialize('oauth_state', state, {
     httpOnly: true,
     secure: isProduction,
     sameSite: 'lax',

@@ -1,11 +1,9 @@
 import { SignJWT, jwtVerify } from 'jose';
-import type { VercelRequest } from '@vercel/node';
-import type { SessionPayload } from './types';
 import { parse, serialize } from 'cookie';
 
 const SECRET = new TextEncoder().encode(process.env.SESSION_SECRET || 'fallback-secret-key');
 
-export async function generateSessionToken(username: string): Promise<string> {
+export async function generateSessionToken(username) {
   const token = await new SignJWT({ username })
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()
@@ -15,7 +13,7 @@ export async function generateSessionToken(username: string): Promise<string> {
   return token;
 }
 
-export async function verifySessionToken(token: string): Promise<SessionPayload | null> {
+export async function verifySessionToken(token) {
   try {
     const { payload } = await jwtVerify(token, SECRET);
 
@@ -24,13 +22,13 @@ export async function verifySessionToken(token: string): Promise<SessionPayload 
       return null;
     }
 
-    return payload as unknown as SessionPayload;
+    return payload;
   } catch (error) {
     return null;
   }
 }
 
-export async function validateSession(req: VercelRequest): Promise<{ valid: boolean; username?: string }> {
+export async function validateSession(req) {
   const cookies = parse(req.headers.cookie || '');
   const sessionToken = cookies.session;
 
@@ -53,7 +51,7 @@ export async function validateSession(req: VercelRequest): Promise<{ valid: bool
   return { valid: true, username: session.username };
 }
 
-export function createSessionCookie(token: string, isProduction: boolean): string {
+export function createSessionCookie(token, isProduction) {
   return serialize('session', token, {
     httpOnly: true,
     secure: isProduction,
@@ -63,7 +61,7 @@ export function createSessionCookie(token: string, isProduction: boolean): strin
   });
 }
 
-export function clearSessionCookie(isProduction: boolean): string {
+export function clearSessionCookie(isProduction) {
   return serialize('session', '', {
     httpOnly: true,
     secure: isProduction,

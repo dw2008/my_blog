@@ -1,9 +1,7 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { listFiles, getFile } from '../_lib/github';
+import { listFiles, getFile } from '../_lib/github.js';
 import matter from 'gray-matter';
-import type { Post } from '../_lib/types';
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+export default async function handler(req, res) {
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' });
   }

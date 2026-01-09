@@ -11,7 +11,7 @@ export default async function handler(req, res) {
     const files = await listFiles('posts');
 
     // Fetch and parse each file
-    const posts: Post[] = [];
+    const posts = [];
 
     for (const file of files) {
       const fileData = await getFile(file.path);

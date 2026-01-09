@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Calendar, ArrowRight, Image as ImageIcon } from 'lucide-react';
 export type Category = 'tech' | 'pokemon' | 'life';
 interface BlogCardProps {
@@ -16,6 +17,7 @@ export function BlogCard({
   date,
   category,
   readTime,
+  slug,
   imageUrl
 }: BlogCardProps) {
   const getCategoryStyles = (cat: Category) => {
@@ -28,7 +30,8 @@ export function BlogCard({
         return 'bg-stone-100 text-stone-700 border-stone-200';
     }
   };
-  return <article className="group flex flex-col h-full bg-white rounded-3xl border border-stone-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+  return <Link to={`/blog/${slug}`} className="block h-full">
+    <article className="group flex flex-col h-full bg-white rounded-3xl border border-stone-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
       {/* Image Area */}
       <div className="w-full aspect-video bg-stone-100 relative overflow-hidden">
         {imageUrl ? <img src={imageUrl} alt={title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" /> : <div className="w-full h-full flex items-center justify-center text-stone-300">
@@ -64,5 +67,6 @@ export function BlogCard({
           </span>
         </div>
       </div>
-    </article>;
+    </article>
+  </Link>;
 }

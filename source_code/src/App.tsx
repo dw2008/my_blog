@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { BlogPage } from './pages/BlogPage';
+import { BlogPostPage } from './pages/BlogPostPage';
 import { MePage } from './pages/MePage';
 import { ProtectedRoute } from './components/admin/ProtectedRoute';
 import { AdminDashboard } from './pages/admin/AdminDashboard';
@@ -15,6 +16,7 @@ export function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/blog" replace />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/me" element={<MePage />} />
           <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
           <Route path="/admin/create" element={<ProtectedRoute><CreatePost /></ProtectedRoute>} />

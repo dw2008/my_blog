@@ -1,8 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { randomBytes } from 'crypto';
-import { serialize } from 'cookie';
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+export default function handler(req: VercelRequest, res: VercelResponse) {
   try {
     if (req.method !== 'GET') {
       return res.status(405).json({ error: 'Method not allowed' });
@@ -18,17 +16,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     // Generate random state for CSRF protection
-    const state = randomBytes(32).toString('hex');
+    const state = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 
-    // Store state in temporary cookie
+    // Store state in cookie
     const isProduction = process.env.NODE_ENV === 'production';
-    res.setHeader('Set-Cookie', serialize('oauth_state', state, {
-      httpOnly: true,
-      secure: isProduction,
-      sameSite: 'lax',
-      maxAge: 600, // 10 minutes
-      path: '/',
-    }));
+    const cookie = `oauth_state=${state}; HttpOnly; ${isProduction ? 'Secure;' : ''} SameSite=Lax; Max-Age=600; Path=/`;
+    res.setHeader('Set-Cookie', cookie);
 
     // Build OAuth URL
     const githubOAuthUrl = new URL('https://github.com/login/oauth/authorize');
@@ -43,7 +36,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     console.error('Error in github auth handler:', error);
     return res.status(500).json({
       error: 'Internal server error',
-      message: error instanceof Error ? error.message : 'Unknown error'
+      message: error instanceof Error ? error.message : 'Unknown error',
+      stack: error instanceof Error ? error.stack : undefined
     });
   }
 }

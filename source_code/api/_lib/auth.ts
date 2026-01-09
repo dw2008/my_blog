@@ -18,7 +18,13 @@ export async function generateSessionToken(username: string): Promise<string> {
 export async function verifySessionToken(token: string): Promise<SessionPayload | null> {
   try {
     const { payload } = await jwtVerify(token, SECRET);
-    return payload as SessionPayload;
+
+    // Validate payload structure
+    if (typeof payload.username !== 'string') {
+      return null;
+    }
+
+    return payload as unknown as SessionPayload;
   } catch (error) {
     return null;
   }

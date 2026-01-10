@@ -11,13 +11,13 @@ export function MePage() {
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-stone-900 tracking-tight">
               I'm Daniel, a programmer who loves{' '}
-              <span className="text-yellow-600 relative inline-block">
+              <span className="text-blue-600 relative inline-block">
                 pixels
                 <svg className="absolute w-full h-2 bottom-1 left-0 text-yellow-200 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
                 </svg>
               </span>{' '}
-              and <span className="text-blue-600">Pokemon</span>.
+              and <span className="text-yellow-600">Pokemon</span>.
             </h1>
             <p className="text-lg text-stone-600 leading-relaxed">
               I'm a software developer who spends my free time building projects and relaxing with cards, games, and books.

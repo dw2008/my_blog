@@ -31,8 +31,8 @@ export function BlogPage() {
             Thoughts & <span className="text-blue-600">Adventures</span>
           </h1>
           <p className="text-lg text-stone-600 max-w-2xl">
-            A collection of technical deep dives, Pokémon obsessions, and
-            everything in between. Grab a coffee and stay a while.
+            A collection of technical deep-dives, Pokémon discussions, and
+            everything in between. Thanks for stopping by!
           </p>
         </div>
 

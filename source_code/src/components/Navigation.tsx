@@ -23,7 +23,7 @@ export function Navigation() {
               <Sparkles size={18} />
             </div>
             <span className="font-bold text-lg tracking-tight text-stone-900">
-              Daniel's Corner
+              Daniel's Discussions
             </span>
           </Link>
 

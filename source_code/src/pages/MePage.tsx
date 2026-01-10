@@ -63,7 +63,7 @@ export function MePage() {
                 <span>Relaxing and developing my gaming skills</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-xl">📚</span>
+                <span className="text-xl">📖</span>
                 <span>Reading books every night before bed</span>
               </li>
             </ul>
@@ -75,55 +75,18 @@ export function MePage() {
             </h2>
             <div className="flex gap-4 items-start">
               <div className="w-20 h-28 bg-blue-200 rounded-md shadow-sm flex-shrink-0 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=200" alt="Book cover" className="w-full h-full object-cover opacity-80 mix-blend-multiply" />
+                <img src="https://images.booksense.com/images/768/347/9780241347768.jpg" alt="Book cover" className="w-full h-full object-cover opacity-80 mix-blend-multiply" />
               </div>
               <div>
                 <h3 className="font-bold text-stone-900">
-                  The Design of Everyday Things
+                  Don Quixote
                 </h3>
-                <p className="text-stone-500 text-sm mb-2">Don Norman</p>
+                <p className="text-stone-500 text-sm mb-2">Miguel de Cervantes</p>
                 <p className="text-stone-600 text-sm">
-                  Re-reading this classic. It's amazing how much still applies
-                  to modern digital product design.
+                  Reading this classic satire of old chivalry tales about knights and their adventures.
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Past Reads Section */}
-        <div className="mt-16 pt-12 border-t border-stone-200">
-          <h3 className="text-lg font-bold text-stone-900 mb-6 flex items-center gap-2">
-            <span className="text-stone-400">📚</span> Past Reads
-          </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-            {[{
-            title: 'Clean Code',
-            author: 'Robert C. Martin',
-            color: 'bg-red-100'
-          }, {
-            title: 'Refactoring UI',
-            author: 'Adam Wathan',
-            color: 'bg-indigo-100'
-          }, {
-            title: 'Atomic Habits',
-            author: 'James Clear',
-            color: 'bg-amber-100'
-          }, {
-            title: 'Deep Work',
-            author: 'Cal Newport',
-            color: 'bg-emerald-100'
-          }].map((book, i) => <div key={i} className="group flex items-center gap-3 p-3 rounded-xl hover:bg-white hover:shadow-sm transition-all border border-transparent hover:border-stone-100">
-                <div className={`w-12 h-16 ${book.color} rounded shadow-sm flex-shrink-0 group-hover:-translate-y-1 transition-transform duration-300`}></div>
-                <div className="min-w-0">
-                  <h4 className="text-sm font-semibold text-stone-800 truncate" title={book.title}>
-                    {book.title}
-                  </h4>
-                  <p className="text-xs text-stone-500 truncate">
-                    {book.author}
-                  </p>
-                </div>
-              </div>)}
           </div>
         </div>
       </main>

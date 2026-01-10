@@ -28,7 +28,7 @@ export function BlogPage() {
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
         <div className="mb-12 text-center sm:text-left">
           <h1 className="text-4xl sm:text-5xl font-bold text-stone-900 mb-4 tracking-tight">
-            Thoughts & <span className="text-blue-600">Adventures</span>
+            <span className="text-blue-600">My Thoughts</span>
           </h1>
           <p className="text-lg text-stone-600 max-w-2xl">
             A collection of technical deep-dives, Pokémon discussions, and

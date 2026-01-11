@@ -1,5 +1,5 @@
 ---
-title: What I Learned From Building My First Website
+title: What I Learned From Building My Website
 excerpt: >-
   This year, I made a New Year's resolution to start blogging every week.
   Instead of only posting on LinkedIn or Twitter, I wanted my own personalizable

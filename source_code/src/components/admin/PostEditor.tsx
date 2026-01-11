@@ -260,7 +260,7 @@ export function PostEditor({ mode, initialData }: PostEditorProps) {
                       <a {...props} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800" />
                     ),
                     p: ({ node, ...props }) => (
-                      <p {...props} style={{ whiteSpace: 'pre-wrap' }} />
+                      <p {...props} style={{ whiteSpace: 'pre-wrap' }} className="mb-4" />
                     ),
                   }}
                 >

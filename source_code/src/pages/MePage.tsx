@@ -32,9 +32,9 @@ export function MePage() {
             </div>
 
             <div className="flex justify-center md:justify-start gap-4 pt-6">
-              <SocialLink icon={<Github size={20} />} href="#" label="GitHub" />
-              <SocialLink icon={<Twitter size={20} />} href="#" label="Twitter" />
-              <SocialLink icon={<Linkedin size={20} />} href="#" label="LinkedIn" />
+              <SocialLink icon={<Linkedin size={20} />} href="https://www.linkedin.com/in/daniel-wu-81741b274/" label="LinkedIn" />
+              <SocialLink icon={<Twitter size={20} />} href="https://x.com/DanielCxWu" label="Twitter" />
+              <SocialLink icon={<Github size={20} />} href="https://github.com/dw2008" label="GitHub" />
             </div>
           </div>
         </div>

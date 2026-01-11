@@ -77,6 +77,14 @@ export function PostEditor({ mode, initialData }: PostEditorProps) {
     }
   };
 
+  const processContent = (content: string) => {
+    // Replace multiple consecutive newlines (3+) with HTML breaks to preserve spacing
+    return content.replace(/\n{3,}/g, (match) => {
+      const breaks = match.length - 2;
+      return '\n\n' + '<br>'.repeat(breaks) + '\n\n';
+    });
+  };
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="flex items-center justify-between">
@@ -260,11 +268,11 @@ export function PostEditor({ mode, initialData }: PostEditorProps) {
                       <a {...props} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800" />
                     ),
                     p: ({ node, ...props }) => (
-                      <p {...props} style={{ whiteSpace: 'pre-wrap' }} className="mb-4" />
+                      <p {...props} style={{ whiteSpace: 'pre-wrap' }} />
                     ),
                   }}
                 >
-                  {formData.content}
+                  {processContent(formData.content)}
                 </ReactMarkdown>
               </div>
             </div>

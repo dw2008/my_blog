@@ -79,8 +79,30 @@ export function PostEditor({ mode, initialData }: PostEditorProps) {
   };
 
   const processContent = (content: string) => {
+    // Split content by code blocks to avoid processing inside them
+    const codeBlockRegex = /(```[\s\S]*?```|`[^`]+`)/g;
+    const parts: string[] = [];
+    let lastIndex = 0;
+    let match;
+
+    while ((match = codeBlockRegex.exec(content)) !== null) {
+      // Process text before code block
+      const beforeCode = content.slice(lastIndex, match.index);
+      parts.push(processText(beforeCode));
+      // Keep code block unchanged
+      parts.push(match[0]);
+      lastIndex = match.index + match[0].length;
+    }
+
+    // Process remaining text after last code block
+    parts.push(processText(content.slice(lastIndex)));
+
+    return parts.join('');
+  };
+
+  const processText = (text: string) => {
     // Replace multiple consecutive newlines with HTML breaks to preserve spacing
-    return content.replace(/\n{2,}/g, (match) => {
+    return text.replace(/\n{2,}/g, (match) => {
       const numBreaks = match.length - 1;
       return '\n' + '<br>\n'.repeat(numBreaks);
     });

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import remarkGfm from 'remark-gfm';
+import remarkBreaks from 'remark-breaks';
 import { createPost, updatePost } from '../../lib/api';
 import type { Post } from '../../types';
 
@@ -55,6 +56,24 @@ export function PostEditor({ mode, initialData }: PostEditorProps) {
       setError(err.message || 'Failed to save post');
     } finally {
       setSaving(false);
+    }
+  };
+
+  const handleTabKey = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === 'Tab') {
+      e.preventDefault();
+      const target = e.currentTarget;
+      const start = target.selectionStart;
+      const end = target.selectionEnd;
+
+      // Insert tab character (or spaces) at cursor position
+      const newContent = formData.content.substring(0, start) + '  ' + formData.content.substring(end);
+      setFormData({ ...formData, content: newContent });
+
+      // Move cursor after the inserted tab
+      setTimeout(() => {
+        target.selectionStart = target.selectionEnd = start + 2;
+      }, 0);
     }
   };
 
@@ -202,6 +221,7 @@ export function PostEditor({ mode, initialData }: PostEditorProps) {
                 required
                 value={formData.content}
                 onChange={(e) => setFormData({ ...formData, content: e.target.value })}
+                onKeyDown={handleTabKey}
                 className="w-full px-4 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
                 rows={20}
                 placeholder="Write your post content in markdown..."
@@ -234,7 +254,15 @@ export function PostEditor({ mode, initialData }: PostEditorProps) {
               <div className="prose prose-stone max-w-none">
                 <ReactMarkdown
                   rehypePlugins={[rehypeHighlight]}
-                  remarkPlugins={[remarkGfm]}
+                  remarkPlugins={[remarkGfm, remarkBreaks]}
+                  components={{
+                    a: ({ node, ...props }) => (
+                      <a {...props} target="_blank" rel="noopener noreferrer" />
+                    ),
+                    p: ({ node, ...props }) => (
+                      <p {...props} style={{ whiteSpace: 'pre-wrap' }} />
+                    ),
+                  }}
                 >
                   {formData.content}
                 </ReactMarkdown>

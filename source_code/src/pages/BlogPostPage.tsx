@@ -4,6 +4,7 @@ import { Calendar, Clock, ArrowLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import remarkGfm from 'remark-gfm';
+import remarkBreaks from 'remark-breaks';
 import { fetchPost } from '../lib/api';
 import type { Post } from '../types';
 
@@ -132,7 +133,15 @@ export function BlogPostPage() {
             <div className="prose prose-stone prose-lg max-w-none">
               <ReactMarkdown
                 rehypePlugins={[rehypeHighlight]}
-                remarkPlugins={[remarkGfm]}
+                remarkPlugins={[remarkGfm, remarkBreaks]}
+                components={{
+                  a: ({ node, ...props }) => (
+                    <a {...props} target="_blank" rel="noopener noreferrer" />
+                  ),
+                  p: ({ node, ...props }) => (
+                    <p {...props} style={{ whiteSpace: 'pre-wrap' }} />
+                  ),
+                }}
               >
                 {post.content || ''}
               </ReactMarkdown>

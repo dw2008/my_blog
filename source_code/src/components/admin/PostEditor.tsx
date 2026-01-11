@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
+import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 import remarkBreaks from 'remark-breaks';
 import { createPost, updatePost } from '../../lib/api';
@@ -78,10 +79,10 @@ export function PostEditor({ mode, initialData }: PostEditorProps) {
   };
 
   const processContent = (content: string) => {
-    // Replace multiple consecutive newlines (3+) with HTML breaks to preserve spacing
-    return content.replace(/\n{3,}/g, (match) => {
-      const breaks = match.length - 2;
-      return '\n\n' + '<br>'.repeat(breaks) + '\n\n';
+    // Replace multiple consecutive newlines with HTML breaks to preserve spacing
+    return content.replace(/\n{2,}/g, (match) => {
+      const numBreaks = match.length - 1;
+      return '\n' + '<br>\n'.repeat(numBreaks);
     });
   };
 
@@ -261,14 +262,14 @@ export function PostEditor({ mode, initialData }: PostEditorProps) {
               </div>
               <div className="prose prose-stone max-w-none">
                 <ReactMarkdown
-                  rehypePlugins={[rehypeHighlight]}
+                  rehypePlugins={[rehypeRaw, rehypeHighlight]}
                   remarkPlugins={[remarkGfm, remarkBreaks]}
                   components={{
                     a: ({ node, ...props }) => (
                       <a {...props} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800" />
                     ),
                     p: ({ node, ...props }) => (
-                      <p {...props} style={{ whiteSpace: 'pre-wrap' }} />
+                      <p {...props} style={{ whiteSpace: 'pre-wrap' }} className="my-4" />
                     ),
                   }}
                 >

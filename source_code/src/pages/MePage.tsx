@@ -7,7 +7,7 @@ export function MePage() {
         <div className="mb-24">
           <div className="space-y-6 text-center md:text-left max-w-3xl mx-auto">
             <div className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 font-medium text-sm mb-2">
-              Hello there! 👋
+              Hey there! 👋
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-stone-900 tracking-tight">
               I'm Daniel, a programmer who loves{' '}
@@ -47,7 +47,10 @@ export function MePage() {
               What I Love
             </h2>
             <ul className="space-y-3 text-stone-600">
-
+              <li className="flex items-start gap-2">
+                <span className="text-xl">😘</span>
+                <span>My girlfriend!!!!!!!</span>
+              </li>
               <li className="flex items-start gap-2">
                 <span className="text-xl">⚡️</span>
                 <span>
@@ -61,10 +64,6 @@ export function MePage() {
               <li className="flex items-start gap-2">
                 <span className="text-xl">🎮</span>
                 <span>Relaxing and developing my gaming skills</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-xl">📖</span>
-                <span>Reading books every night before bed</span>
               </li>
             </ul>
           </div>

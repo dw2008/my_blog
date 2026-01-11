@@ -257,7 +257,7 @@ export function PostEditor({ mode, initialData }: PostEditorProps) {
                   remarkPlugins={[remarkGfm, remarkBreaks]}
                   components={{
                     a: ({ node, ...props }) => (
-                      <a {...props} target="_blank" rel="noopener noreferrer" />
+                      <a {...props} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800" />
                     ),
                     p: ({ node, ...props }) => (
                       <p {...props} style={{ whiteSpace: 'pre-wrap' }} />

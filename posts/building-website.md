@@ -27,9 +27,10 @@ The API endpoint (which is a specific URL that performs one task) connects to Gi
 **Step 5: Data Returns as JSON**
 The backend sends back structured data as a JavaScript Object Notation (JSON) file.
 Why JSON? It's the universal language of web APIs. Both code in the browser and on the server can read it easily. It’s structured, lightweight, and also human-readable. Here’s a simplified example of a JSON file:
-```[ 
-{"title": "My First Post", "date": "2024-01-01", "slug": "my-first-post"}, 
-{"title": "Building a Website", "date": "2024-01-08", "slug": "building-website"}
+```[
+[
+   {"title": "My First Post", "date": "2024-01-01", "slug": "my-first-post"}, 
+   {"title": "Building a Website", "date": "2024-01-08", "slug": "building-website"}
 ]
 ```
 **Step 6: React Displays the Posts**

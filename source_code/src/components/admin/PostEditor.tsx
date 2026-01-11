@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
+import rehypeHighlight from 'rehype-highlight';
+import remarkGfm from 'remark-gfm';
 import { createPost, updatePost } from '../../lib/api';
 import type { Post } from '../../types';
 
@@ -230,7 +232,12 @@ export function PostEditor({ mode, initialData }: PostEditorProps) {
                 <span>{formData.readTime}</span>
               </div>
               <div className="prose prose-stone max-w-none">
-                <ReactMarkdown>{formData.content}</ReactMarkdown>
+                <ReactMarkdown
+                  rehypePlugins={[rehypeHighlight]}
+                  remarkPlugins={[remarkGfm]}
+                >
+                  {formData.content}
+                </ReactMarkdown>
               </div>
             </div>
           </div>

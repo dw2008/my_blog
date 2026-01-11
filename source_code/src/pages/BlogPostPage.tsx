@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Calendar, Clock, ArrowLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import rehypeHighlight from 'rehype-highlight';
+import remarkGfm from 'remark-gfm';
 import { fetchPost } from '../lib/api';
 import type { Post } from '../types';
 
@@ -128,7 +130,12 @@ export function BlogPostPage() {
 
             {/* Content */}
             <div className="prose prose-stone prose-lg max-w-none">
-              <ReactMarkdown>{post.content || ''}</ReactMarkdown>
+              <ReactMarkdown
+                rehypePlugins={[rehypeHighlight]}
+                remarkPlugins={[remarkGfm]}
+              >
+                {post.content || ''}
+              </ReactMarkdown>
             </div>
           </div>
         </article>

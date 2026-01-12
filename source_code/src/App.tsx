@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { Navigation } from './components/Navigation';
 import { BlogPage } from './pages/BlogPage';
 import { BlogPostPage } from './pages/BlogPostPage';
@@ -23,5 +24,6 @@ export function App() {
           <Route path="/admin/edit/:slug" element={<ProtectedRoute><EditPost /></ProtectedRoute>} />
         </Routes>
       </div>
+      <Analytics />
     </BrowserRouter>;
 }

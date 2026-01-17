@@ -14,7 +14,7 @@ export default async function handler(req, res) {
     return res.status(401).json({ error: 'Unauthorized' });
   }
 
-  const { title, excerpt, date, category, readTime, slug, imageUrl, content } = req.body;
+  const { title, excerpt, date, category, readTime, slug, imageUrl, content, status } = req.body;
 
   // Validate required fields
   if (!title || !excerpt || !date || !category || !readTime || !slug || !content) {
@@ -26,12 +26,24 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Invalid category' });
   }
 
+  // Validate status if provided
+  if (status && !['draft', 'published', 'archived'].includes(status)) {
+    return res.status(400).json({ error: 'Invalid status. Must be draft, published, or archived.' });
+  }
+
   try {
     // Get existing file to retrieve SHA
     const existing = await getFile(`posts/${slug}.md`);
 
     if (!existing) {
       return res.status(404).json({ error: 'Post not found' });
+    }
+
+    // Preserve existing status if not provided
+    let finalStatus = status;
+    if (!finalStatus) {
+      const { data } = matter(existing.content);
+      finalStatus = data.status || 'published';
     }
 
     // Generate markdown with frontmatter
@@ -42,6 +54,7 @@ export default async function handler(req, res) {
       category,
       readTime,
       slug,
+      status: finalStatus,
       ...(imageUrl && { imageUrl }),
     });
 

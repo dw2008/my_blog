@@ -61,14 +61,19 @@ export async function createOrUpdateFile(
   path: string,
   content: string,
   message: string,
-  sha?: string
+  sha?: string,
+  isBinary: boolean = false
 ) {
+  // If binary, content is already base64-encoded
+  // If text, encode it
+  const base64Content = isBinary ? content : Buffer.from(content).toString('base64');
+
   return await octokit.repos.createOrUpdateFileContents({
     owner: REPO_CONFIG.owner,
     repo: REPO_CONFIG.repo,
     path,
     message,
-    content: Buffer.from(content).toString('base64'),
+    content: base64Content,
     branch: REPO_CONFIG.branch,
     ...(sha && { sha }),
   });

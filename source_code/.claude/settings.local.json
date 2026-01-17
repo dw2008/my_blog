@@ -3,7 +3,10 @@
     "allow": [
       "Bash(pnpm --version:*)",
       "Bash(npm install:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(xargs cat:*)",
+      "Bash(git pull:*)",
+      "Bash(git push)"
     ]
   }
 }

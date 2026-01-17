@@ -8,7 +8,10 @@ export interface Post {
   slug: string;
   imageUrl?: string;
   content?: string;
+  status?: 'draft' | 'published' | 'archived';
 }
+
+export type PostStatus = 'draft' | 'published' | 'archived';
 
 export interface SessionPayload {
   username: string;

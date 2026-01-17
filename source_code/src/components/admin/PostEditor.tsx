@@ -7,6 +7,7 @@ import remarkGfm from 'remark-gfm';
 import remarkBreaks from 'remark-breaks';
 import { createPost, updatePost } from '../../lib/api';
 import type { Post } from '../../types';
+import { ImageUpload } from './ImageUpload';
 
 interface PostEditorProps {
   mode: 'create' | 'edit';
@@ -17,6 +18,7 @@ export function PostEditor({ mode, initialData }: PostEditorProps) {
   const navigate = useNavigate();
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [textareaRef, setTextareaRef] = useState<HTMLTextAreaElement | null>(null);
 
   const [formData, setFormData] = useState({
     title: initialData?.title || '',
@@ -27,6 +29,7 @@ export function PostEditor({ mode, initialData }: PostEditorProps) {
     readTime: initialData?.readTime || '',
     imageUrl: initialData?.imageUrl || '',
     content: initialData?.content || '',
+    status: initialData?.status || 'draft',
   });
 
   // Auto-generate slug from title
@@ -76,6 +79,31 @@ export function PostEditor({ mode, initialData }: PostEditorProps) {
         target.selectionStart = target.selectionEnd = start + 2;
       }, 0);
     }
+  };
+
+  const handleImageUploaded = (imageUrl: string, markdown: string) => {
+    if (!textareaRef) return;
+
+    // Get current cursor position
+    const start = textareaRef.selectionStart;
+    const end = textareaRef.selectionEnd;
+
+    // Insert markdown at cursor position
+    const newContent =
+      formData.content.substring(0, start) +
+      markdown +
+      formData.content.substring(end);
+
+    setFormData({ ...formData, content: newContent });
+
+    // Move cursor after inserted markdown
+    setTimeout(() => {
+      if (textareaRef) {
+        const newCursorPos = start + markdown.length;
+        textareaRef.focus();
+        textareaRef.setSelectionRange(newCursorPos, newCursorPos);
+      }
+    }, 0);
   };
 
   const processContent = (content: string) => {
@@ -233,6 +261,25 @@ export function PostEditor({ mode, initialData }: PostEditorProps) {
 
             <div>
               <label className="block text-sm font-medium text-stone-900 mb-2">
+                Status <span className="text-red-600">*</span>
+              </label>
+              <select
+                required
+                value={formData.status}
+                onChange={(e) => setFormData({ ...formData, status: e.target.value as any })}
+                className="w-full px-4 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              >
+                <option value="draft">Draft</option>
+                <option value="published">Published</option>
+                <option value="archived">Archived</option>
+              </select>
+              <p className="text-xs text-stone-600 mt-1">
+                Only published posts are visible to the public
+              </p>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-stone-900 mb-2">
                 Image URL
               </label>
               <input
@@ -248,7 +295,16 @@ export function PostEditor({ mode, initialData }: PostEditorProps) {
               <label className="block text-sm font-medium text-stone-900 mb-2">
                 Content (Markdown) <span className="text-red-600">*</span>
               </label>
+
+              <div className="mb-2">
+                <ImageUpload
+                  onImageUploaded={handleImageUploaded}
+                  disabled={saving}
+                />
+              </div>
+
               <textarea
+                ref={setTextareaRef}
                 required
                 value={formData.content}
                 onChange={(e) => setFormData({ ...formData, content: e.target.value })}

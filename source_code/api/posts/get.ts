@@ -1,5 +1,6 @@
 import { getFile } from '../_lib/github.js';
 import matter from 'gray-matter';
+import { validateSession } from '../_lib/auth.js';
 
 export default async function handler(req, res) {
   if (req.method !== 'GET') {
@@ -20,6 +21,14 @@ export default async function handler(req, res) {
     }
 
     const { data, content } = matter(fileData.content);
+    const status = data.status || 'published';
+
+    // Check authentication for non-published posts
+    const { valid } = await validateSession(req);
+
+    if (status !== 'published' && !valid) {
+      return res.status(404).json({ error: 'Post not found' });
+    }
 
     return res.status(200).json({
       post: {
@@ -30,6 +39,7 @@ export default async function handler(req, res) {
         readTime: data.readTime || '',
         slug: data.slug || slug,
         imageUrl: data.imageUrl,
+        status,
         content,
       },
     });

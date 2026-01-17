@@ -57,6 +57,19 @@ export function PostList() {
     }
   };
 
+  const getStatusStyles = (status?: string) => {
+    switch (status) {
+      case 'published':
+        return 'bg-green-100 text-green-800 border-green-200';
+      case 'draft':
+        return 'bg-yellow-100 text-yellow-800 border-yellow-200';
+      case 'archived':
+        return 'bg-gray-100 text-gray-800 border-gray-200';
+      default:
+        return 'bg-green-100 text-green-800 border-green-200';
+    }
+  };
+
   if (loading) {
     return (
       <div className="text-center py-12">
@@ -95,6 +108,7 @@ export function PostList() {
           <tr>
             <th className="text-left px-6 py-4 text-sm font-semibold text-stone-900">Title</th>
             <th className="text-left px-6 py-4 text-sm font-semibold text-stone-900">Category</th>
+            <th className="text-left px-6 py-4 text-sm font-semibold text-stone-900">Status</th>
             <th className="text-left px-6 py-4 text-sm font-semibold text-stone-900">Date</th>
             <th className="text-right px-6 py-4 text-sm font-semibold text-stone-900">Actions</th>
           </tr>
@@ -109,6 +123,11 @@ export function PostList() {
               <td className="px-6 py-4">
                 <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(post.category)}`}>
                   {post.category}
+                </span>
+              </td>
+              <td className="px-6 py-4">
+                <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium border ${getStatusStyles(post.status)}`}>
+                  {post.status || 'published'}
                 </span>
               </td>
               <td className="px-6 py-4 text-sm text-stone-600">

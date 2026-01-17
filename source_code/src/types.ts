@@ -8,6 +8,8 @@ export interface Post {
   slug: string;
   imageUrl?: string;
   content?: string;
+  status?: 'draft' | 'published' | 'archived';
 }
 
 export type Category = 'tech' | 'pokemon' | 'life';
+export type PostStatus = 'draft' | 'published' | 'archived';

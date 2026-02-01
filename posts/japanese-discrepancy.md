@@ -25,7 +25,6 @@ Before we dive into why Japanese cards are cheaper, let’s first highlight the 
 
 Above, we have the English and Japanese variations of the Umbreon ex Special Illustration Rare from *Prismatic Evolutions*. Visually, these two cards already have very different printings. The Japanese Umbreon has much more detail, while the English one has a rougher, fingerprint-like texture. Even so, the raw market prices on these cards differ vastly. According to TCGPlayer.com, a major online trading card sale platform, the English Umbreon sells for $865.00, while the Japanese version sells for a much lower $309.53 (all market prices are of 1/25/2026). 
 If we want a more “objective” measure of print quality, we can look at grading data. If you aren't familiar with the technical side of the hobby, most high-value cards are graded. This is a process where a third-party company (like PSA) evaluates a card’s condition and print quality under a microscope and seals it in a protective plastic "slab" with a score from 1 to 10. A grade of 10 is considered a perfect “Gem Mint” card and can sometimes double or triple a card’s value. 
-![1769973905926-psa.jpeg](https://raw.githubusercontent.com/dw2008/my_blog/main/images/1769973905926-psa.jpeg)
 According to PSA’s population report, the English Umbreon ex has only a 31.8% Gem Mint rate, while the Japanese version has a 87.6% Gem Mint rate. This data highlights the printing discrepancies between languages, as the Japanese version’s Gem Mint rate is considerably higher.
 This pattern doesn’t just stop at this one card, however. Another example of a popular card is the Pikachu ex Special Illustration Rare from *Surging Sparks*.
 
@@ -47,6 +46,7 @@ In Japan, you can purchase a standard booster box of 30 packs for roughly 5,400 
 At first glance, English already seems like a worse deal, being around four times more expensive than Japanese. One potential saving grace is that English packs have 10 cards each, whereas Japanese packs only have 5. However, as any collector will tell you, the vast majority of those 360 English cards are "bulk" common cards that hold almost no monetary or competitive value. Since the "hits" occupy the same limited slots in a pack regardless of the language, English collectors are essentially paying a 4x premium for filler cards, driving up prices of English “hits” on the secondary market.
 **Manufacturing**
 This focus on massive volume driven by larger markets and a need for extra “bulk” cards highlights a core of the issue: the manufacturing process itself.
+![1769975903071-mpgTrophy.jpeg](https://raw.githubusercontent.com/dw2008/my_blog/main/images/1769975903071-mpgTrophy.jpeg)
 All English, European, and Latin American cards are handled by Millennium Print Group (MPG), a subsidiary of the Pokemon Company International based in the U.S. and the Netherlands. MPG has the monumental task of printing more cards in dozens of languages for nearly 80 countries, which often leads to poorer quality control (hence the worse grading statistics).
 In comparison, the Pokemon Company (not the International one) manages Japanese printing directly. Because they only focus on a few languages (Japanese, Chinese, and Thai), they can maintain a much higher standard of precision. They don't have to sacrifice quality for the sheer quantity required to supply the entire Western world.
 **Pull Rates**
@@ -55,6 +55,13 @@ In Japan, this experience is much more regulated. Due to strict anti-gambling an
 **Diluted Odds**
 To make matters more difficult for Western collectors, English sets can be diluted compared to their Japanese counterparts.
 Japanese sets typically release two months ahead of the English versions. When those cards eventually make their way West, the Pokémon Company sometimes combines multiple Japanese sets into one massive English expansion. For example, the English set *Surging Sparks* (the set where the Pikachu ex is from) combined the two separate Japanese sets *Super Electric Breaker* and *Paradise Dragona*.
+![1769976092215-ssp_BB.jpg](https://raw.githubusercontent.com/dw2008/my_blog/main/images/1769976092215-ssp_BB.jpg)
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+<img src="https://raw.githubusercontent.com/dw2008/my_blog/main/images/1769976276830-superelectricbreaker.jpeg" alt="Super Electric Breaker" class="w-full rounded-lg" />
+<img src="https://raw.githubusercontent.com/dw2008/my_blog/main/images/1769976305602-paradisedragona.jpeg" alt="Paradise Dragona" class="w-full rounded-lg" />
+</div>
+
 By mashing sets together, the card pool for the English version becomes much larger. If you are hunting for one specific card in these combined sets, your odds are generally worse in English because you are fighting against a much larger list of possible pulls. This artificial scarcity, combined with the lack of a guarantee per box plus the increased MSRP, is why a card like the English Pikachu ex maintains a price premium over the easier-to-find Japanese version.
 **The Rarity of Perfection**
 Lastly, I want to circle back to the world of grading, because this is where the price discrepancy truly reaches its peak.
@@ -62,6 +69,7 @@ As we’ve already established, Japanese cards have significantly higher PSA 10 
 To illustrate this, we can look at the Mew ex Special Illustration Rare from Paldean Fates (affectionately known as the "Bubble Mew"). As of late January 2026, the price difference for a PSA 10 copy (taken from pricecharting.com) is staggering:
 The English PSA 10 commands a market price of roughly $1,766.30 USD.
 In comparison, the Japanese PSA 10 sits at a much more accessible $569.93 USD.
+![1769976677876-bubble_mew.jpeg](https://raw.githubusercontent.com/dw2008/my_blog/main/images/1769976677876-bubble_mew.jpeg)
 Statistically, the Japanese version is much easier to grade as a 10 (85.4% vs 36.3% Gem Mint rate), meaning there are more perfect copies available for collectors. For the English version, the low Gem Mint rate means that collectors and investors are willing to pay a 300% premium just for the slab to have a 10 on it.
 **Notable Exceptions**
 While the "Japanese is cheaper" rule holds true for most modern cards, the Pokémon market has several fascinating exceptions where the logic flips. Sometimes, Japanese cards can actually command a massive premium.
@@ -110,17 +118,17 @@ https://www.tcgplayer.com/product/451834/pokemon-swsh12-silver-tempest-lugia-v-a
 https://www.tcgplayer.com/product/570168/pokemon-japan-s12-paradigm-trigger-lugia-v-110-098?Condition=Near+Mint&Language=all&page=1 
 
 Images:
-Title card image:
-https://www.youtube.com/watch?v=fAPZB8mLwkA 
+Title card image: https://www.youtube.com/watch?v=fAPZB8mLwkA 
 Umbreon English: https://www.reddit.com/r/IsMyPokemonCardFake/comments/1ng8xf3/umbreon_prismatic_real_or_fake_pls_halp/ 
 Umbreon JP: https://www.reddit.com/r/PokemonMisprints/comments/1ibpu9y/terastal_festival_umbreon_misprint_fake/ 
 PSA Logo: https://sportscollectorsdigest.com/cards/psa-grading-service-sports-cards-baseball-collectors-hobby 
 Pikachu English: https://www.ebay.com/p/20072462742?iid=397361085798
 Pikachu JP: https://www.reddit.com/r/PokemonTCG/comments/1hat95h/just_another_example_how_japanese_cards_texture/ 
 MPG/TPCI: https://www.landrypop.com/auctions/2025/08/evolution-25-years-of-pokemon-grails/247
-Surging Sparks: https://piggypats.com/1323978/Pokemon-TCG-Scarlet-Violet-Surging-Sparks-Build-Battle
+Surging Sparks: https://www.amazon.com/Pok%C3%A9mon-TCG-Scarlet-Surging-Booster/dp/B0DFBGYFD3
 Super Electric Breaker: https://pokejpn.com/products/super-electric-breaker?srsltid=AfmBOormASQfBoeRIrpWyUpcNHcZeMQo6QsQ7KC2PlfLk6JV2c-obJiT
-Bubble Mew: https://www.reddit.com/r/IsMyPokemonCardFake/comments/1i6wyz1/saw_a_really_good_deal_for_a_psa_10_gem_mt_bubble/ 
+Paradise Dragona: https://pokejpn.com/products/paradise-dragona
+Bubble Mew: https://www.instagram.com/p/DFtbfdyvlkT/?img_index=1
 Mario & Pikachu: https://www.reddit.com/media?url=https://i.redd.it/w7r7bftqikva1.jpg 
 Lillie’s Determination: https://www.tcgplayer.com/product/647200/pokemon-japan-m1l-mega-brave-lillies-determination-091-063?Condition=Near+Mint&page=1&Language=all 
 Charizard ex: https://www.tcgplayer.com/product/567088/pokemon-japan-sv3-ruler-of-the-black-flame-charizard-ex-134-108?page=1&Language=all&Condition=Near+Mint

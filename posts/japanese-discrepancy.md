@@ -5,7 +5,7 @@ excerpt: >-
   logic behind the English and Japanese Pokémon card markets.
 date: '2026-02-01'
 category: pokemon
-readTime: '12'
+readTime: 10 min
 slug: japanese-discrepancy
 status: draft
 imageUrl: 'https://i.ytimg.com/vi/fAPZB8mLwkA/sddefault.jpg'
@@ -73,10 +73,15 @@ In comparison, the Japanese PSA 10 sits at a much more accessible $569.93 USD.
 Statistically, the Japanese version is much easier to grade as a 10 (85.4% vs 36.3% Gem Mint rate), meaning there are more perfect copies available for collectors. For the English version, the low Gem Mint rate means that collectors and investors are willing to pay a 300% premium just for the slab to have a 10 on it.
 **Notable Exceptions**
 While the "Japanese is cheaper" rule holds true for most modern cards, the Pokémon market has several fascinating exceptions where the logic flips. Sometimes, Japanese cards can actually command a massive premium.
-*Japanese-Exclusive Promos:* The most obvious exception is when an English version doesn't exist at all. Legendary cards like the Mario & Luigi Pikachu promos were only released in Japan. Without an English alternative to satisfy global demand, these cards become world-wide grails, with prices that reflect their status. According to pricecharting.com, the Luigi Pikachu full art goes for $3,599 USD ungraded and $10,500 USD in a PSA 10, with the Mario Pikachu full art at $5,170 USD ungraded and a staggering $17,500 USD in a PSA 10.
-*"Waifu" Culture & Speculation:* In the Japanese market, female Trainer cards experience extreme price hikes that rarely translate to the English market. This is driven by a mix of domestic collecting culture and positive feedback loops. As a card gains hype, speculators buy in, driving the price even higher. In these cases, the Japanese version is usually more expensive than the English one. For example, this Lillie’s Determination card is worth $72.80 USD in English and $149.12 USD in Japanese (TCGPlayer). 
-*Favorable English Pull Rates:* Occasionally, English sets break the low pull rate rule. For 2023's *Obsidian Flames*, the pull rates were unusually high. Because the market was flooded with "hits" so quickly, the value of the English cards tanked, making them much cheaper than the Japanese counterparts from *Ruler of the Black Flame*. The sets’ Charizard ex Special Illustration Rare goes for $81.65 USD in English and $125.96 USD in Japanese. 
-*Print Runs & Supply:* Sometimes, Japanese supply is actually lower than English. For example, the Lugia V Alternate Art from Paradigm Trigger (JP) vs. Silver Tempest (EN). Even though the Japanese version has a much higher PSA 10 rate (84.1%) compared to the English rate (56.3%), the Japanese card actually sells for more ($423 USD vs $355 USD). This is often due to shorter Japanese print runs for specific sets, creating a supply squeeze that outweighs the global reach of English.
+**Japanese-Exclusive Promos:** The most obvious exception is when an English version doesn't exist at all. Legendary cards like the Mario & Luigi Pikachu promos were only released in Japan. Without an English alternative to satisfy global demand, these cards become world-wide grails, with prices that reflect their status. According to pricecharting.com, the Luigi Pikachu full art goes for $3,599 USD ungraded and $10,500 USD in a PSA 10, with the Mario Pikachu full art at $5,170 USD ungraded and a staggering $17,500 USD in a PSA 10.
+![1769976767041-mario_pikachu.jpeg](https://raw.githubusercontent.com/dw2008/my_blog/main/images/1769976767041-mario_pikachu.jpeg)
+**"Waifu" Culture & Speculation:** In the Japanese market, female Trainer cards experience extreme price hikes that rarely translate to the English market. This is driven by a mix of domestic collecting culture and positive feedback loops. As a card gains hype, speculators buy in, driving the price even higher. In these cases, the Japanese version is usually more expensive than the English one. For example, this Lillie’s Determination card is worth $72.80 USD in English and $149.12 USD in Japanese (TCGPlayer). 
+![1769976973828-lillie.jpeg](https://raw.githubusercontent.com/dw2008/my_blog/main/images/1769976973828-lillie.jpeg)
+**Favorable English Pull Rates:** Occasionally, English sets break the low pull rate rule. For 2023's *Obsidian Flames*, the pull rates were unusually high. Because the market was flooded with "hits" so quickly, the value of the English cards tanked, making them much cheaper than the Japanese counterparts from *Ruler of the Black Flame*. The sets’ Charizard ex Special Illustration Rare goes for $81.65 USD in English and $125.96 USD in Japanese. 
+![1769976989877-egawa_charizard.jpeg](https://raw.githubusercontent.com/dw2008/my_blog/main/images/1769976989877-egawa_charizard.jpeg)
+**Print Runs & Supply:** Sometimes, Japanese supply is actually lower than English. For example, the Lugia V Alternate Art from Paradigm Trigger (JP) vs. Silver Tempest (EN). Even though the Japanese version has a much higher PSA 10 rate (84.1%) compared to the English rate (56.3%), the Japanese card actually sells for more ($423 USD vs $355 USD). This is often due to shorter Japanese print runs for specific sets, creating a supply squeeze that outweighs the global reach of English.
+![1769977064078-lugiaV.jpeg](https://raw.githubusercontent.com/dw2008/my_blog/main/images/1769977064078-lugiaV.jpeg)
+
 **Conclusion**
 At the end of the day, my journey into the world of Japanese cards taught me one important lesson: stretching your hobby dollars is about understanding what you value. If you’re also someone who collects for the love of the art and the beauty of a pristine, high-quality display piece, Japanese cards offer a way to own masterpiece quality without an absurd price tag.
 Value is subjective. Whether you prefer the English or Japanese, there is no wrong way to collect.
@@ -130,6 +135,6 @@ Super Electric Breaker: https://pokejpn.com/products/super-electric-breaker?srsl
 Paradise Dragona: https://pokejpn.com/products/paradise-dragona
 Bubble Mew: https://www.instagram.com/p/DFtbfdyvlkT/?img_index=1
 Mario & Pikachu: https://www.reddit.com/media?url=https://i.redd.it/w7r7bftqikva1.jpg 
-Lillie’s Determination: https://www.tcgplayer.com/product/647200/pokemon-japan-m1l-mega-brave-lillies-determination-091-063?Condition=Near+Mint&page=1&Language=all 
-Charizard ex: https://www.tcgplayer.com/product/567088/pokemon-japan-sv3-ruler-of-the-black-flame-charizard-ex-134-108?page=1&Language=all&Condition=Near+Mint
+Lillie’s Determination: https://www.tcgplayer.com/product/654523/pokemon-me01-mega-evolution-lillies-determination-184-132?Condition=Near+Mint&page=1&Language=English
+Charizard ex: https://www.tcgplayer.com/product/509980/pokemon-sv03-obsidian-flames-charizard-ex-223-197?Condition=Near+Mint&Language=English&page=1 
 Lugia V: https://www.youtube.com/watch?v=PyDjYiAk8RY

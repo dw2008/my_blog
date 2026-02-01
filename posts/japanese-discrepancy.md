@@ -84,7 +84,7 @@ While the "Japanese is cheaper" rule holds true for most modern cards, the Poké
 
 **Conclusion**
 At the end of the day, my journey into the world of Japanese cards taught me one important lesson: stretching your hobby dollars is about understanding what you value. If you’re also someone who collects for the love of the art and the beauty of a pristine, high-quality display piece, Japanese cards offer a way to own masterpiece quality without an absurd price tag.
-Value is subjective. Whether you prefer the English or Japanese, there is no wrong way to collect.
+Value is subjective. Whether you prefer English or Japanese, there is no wrong way to collect.
 Thanks for reading! I hope this sheds some light on the strange, shiny world of international Pokémon markets. 
 Feel free to contact me if you have any comments or questions!
 

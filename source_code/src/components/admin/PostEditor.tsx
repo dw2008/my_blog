@@ -342,6 +342,7 @@ export function PostEditor({ mode, initialData }: PostEditorProps) {
                 <ReactMarkdown
                   rehypePlugins={[rehypeRaw, rehypeHighlight]}
                   remarkPlugins={[remarkGfm, remarkBreaks]}
+                  skipHtml={false}
                   components={{
                     a: ({ node, ...props }) => (
                       <a {...props} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800" />
@@ -351,7 +352,7 @@ export function PostEditor({ mode, initialData }: PostEditorProps) {
                     ),
                   }}
                 >
-                  {processContent(formData.content)}
+                  {formData.content}
                 </ReactMarkdown>
               </div>
             </div>

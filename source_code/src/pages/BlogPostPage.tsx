@@ -165,6 +165,7 @@ export function BlogPostPage() {
               <ReactMarkdown
                 rehypePlugins={[rehypeRaw, rehypeHighlight]}
                 remarkPlugins={[remarkGfm, remarkBreaks]}
+                skipHtml={false}
                 components={{
                   a: ({ node, ...props }) => (
                     <a {...props} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800" />
@@ -174,7 +175,7 @@ export function BlogPostPage() {
                   ),
                 }}
               >
-                {processContent(post.content || '')}
+                {post.content || ''}
               </ReactMarkdown>
             </div>
           </div>

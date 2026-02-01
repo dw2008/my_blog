@@ -7,7 +7,7 @@ date: '2026-02-01'
 category: pokemon
 readTime: 10 min
 slug: japanese-discrepancy
-status: draft
+status: published
 imageUrl: 'https://i.ytimg.com/vi/fAPZB8mLwkA/sddefault.jpg'
 ---
 I’ve been collecting Pokémon cards for over a year now, and like many others in the hobby, I noticed a strange discrepancy early on.

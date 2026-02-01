@@ -66,7 +66,7 @@ By mashing sets together, the card pool for the English version becomes much lar
 **The Rarity of Perfection**
 Lastly, I want to circle back to the world of grading, because this is where the price discrepancy truly reaches its peak.
 As we’ve already established, Japanese cards have significantly higher PSA 10 Gem Mint rates. When you combine the precision of Japanese printing with the guaranteed hits in every box, you end up with a market where high-quality cards are standard. However, in the world of collectibles, perfection is only expensive if it is rare. Because English cards are so much harder to pull and so much more likely to have factory defects, a perfect English PSA 10 becomes a luxury item for collectors. This creates a massive price gap where the technically "inferior" English card commands a much higher premium simply because a flawless copy is so hard to find.
-To illustrate this, we can look at the Mew ex Special Illustration Rare from Paldean Fates (affectionately known as the "Bubble Mew"). As of late January 2026, the price difference for a PSA 10 copy (taken from pricecharting.com) is staggering:
+To illustrate this, we can look at the Mew ex Special Illustration Rare from *Paldean Fates* (affectionately known as the "Bubble Mew"). As of late January 2026, the price difference for a PSA 10 copy (taken from pricecharting.com) is staggering:
 The English PSA 10 commands a market price of roughly $1,766.30 USD.
 In comparison, the Japanese PSA 10 sits at a much more accessible $569.93 USD.
 ![1769976677876-bubble_mew.jpeg](https://raw.githubusercontent.com/dw2008/my_blog/main/images/1769976677876-bubble_mew.jpeg)

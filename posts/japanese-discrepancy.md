@@ -27,7 +27,13 @@ Above, we have the English and Japanese variations of the Umbreon ex Special Ill
 If we want a more “objective” measure of print quality, we can look at grading data. If you aren't familiar with the technical side of the hobby, most high-value cards are graded. This is a process where a third-party company (like PSA) evaluates a card’s condition and print quality under a microscope and seals it in a protective plastic "slab" with a score from 1 to 10. A grade of 10 is considered a perfect “Gem Mint” card and can sometimes double or triple a card’s value. 
 ![1769973905926-psa.jpeg](https://raw.githubusercontent.com/dw2008/my_blog/main/images/1769973905926-psa.jpeg)
 According to PSA’s population report, the English Umbreon ex has only a 31.8% Gem Mint rate, while the Japanese version has a 87.6% Gem Mint rate. This data highlights the printing discrepancies between languages, as the Japanese version’s Gem Mint rate is considerably higher.
-This pattern doesn’t just stop at this one card, however. Another example of a popular card is the Pikachu ex Special Illustration Rare from *Surging Sparks(.
+This pattern doesn’t just stop at this one card, however. Another example of a popular card is the Pikachu ex Special Illustration Rare from *Surging Sparks*.
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+<img src="https://raw.githubusercontent.com/dw2008/my_blog/main/images/1769974960427-pikachu_eng.jpeg" alt="Pikachu eng" class="w-full rounded-lg" />
+<img src="https://raw.githubusercontent.com/dw2008/my_blog/main/images/1769975033665-pikachu_jp.jpeg" alt="Pikachu jp" class="w-full rounded-lg" />
+</div>
+
 Once again, we can see a texture difference. PSA’s population report states that the English version has a 33.5% Gem Mint rate, while the Japanese one has an 89.9% Gem Mint rate. Still, TCGPlayer’s market prices show once again that the English version is much more expensive than the Japanese one (although not to the Umbreon’s extent), with raw market prices of $258.54 and $191.99 respectively. 
 If these Japanese cards are cheaper and higher quality, why isn't every collector in the world buying them? The first reason lies in the sheer scale of the English market.
 **Global Markets**
@@ -109,7 +115,8 @@ https://www.youtube.com/watch?v=fAPZB8mLwkA
 Umbreon English: https://www.reddit.com/r/IsMyPokemonCardFake/comments/1ng8xf3/umbreon_prismatic_real_or_fake_pls_halp/ 
 Umbreon JP: https://www.reddit.com/r/PokemonMisprints/comments/1ibpu9y/terastal_festival_umbreon_misprint_fake/ 
 PSA Logo: https://sportscollectorsdigest.com/cards/psa-grading-service-sports-cards-baseball-collectors-hobby 
-Pikachu English: https://www.ebay.com/itm/406632087338?epid=20072462742 Pikachu JP: https://www.reddit.com/r/PokemonTCG/comments/1hat95h/just_another_example_how_japanese_cards_texture/ 
+Pikachu English: https://www.ebay.com/p/20072462742?iid=397361085798
+Pikachu JP: https://www.reddit.com/r/PokemonTCG/comments/1hat95h/just_another_example_how_japanese_cards_texture/ 
 MPG/TPCI: https://www.landrypop.com/auctions/2025/08/evolution-25-years-of-pokemon-grails/247
 Surging Sparks: https://piggypats.com/1323978/Pokemon-TCG-Scarlet-Violet-Surging-Sparks-Build-Battle
 Super Electric Breaker: https://pokejpn.com/products/super-electric-breaker?srsltid=AfmBOormASQfBoeRIrpWyUpcNHcZeMQo6QsQ7KC2PlfLk6JV2c-obJiT

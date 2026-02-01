@@ -122,7 +122,7 @@ https://www.psacard.com/pop/tcg-cards/2022/pokemon-japanese-sword-shield-paradig
 https://www.tcgplayer.com/product/451834/pokemon-swsh12-silver-tempest-lugia-v-alternate-full-art?page=1&Language=English 
 https://www.tcgplayer.com/product/570168/pokemon-japan-s12-paradigm-trigger-lugia-v-110-098?Condition=Near+Mint&Language=all&page=1 
 
-Images:
+**Images:**
 Title card image: https://www.youtube.com/watch?v=fAPZB8mLwkA 
 Umbreon English: https://www.reddit.com/r/IsMyPokemonCardFake/comments/1ng8xf3/umbreon_prismatic_real_or_fake_pls_halp/ 
 Umbreon JP: https://www.reddit.com/r/PokemonMisprints/comments/1ibpu9y/terastal_festival_umbreon_misprint_fake/ 

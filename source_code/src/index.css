@@ -91,3 +91,42 @@
   max-width: 600px;
   width: 100%;
 }
+
+/* Resume Builder print styles — @page margin:0 removes browser headers/footers */
+@page {
+  margin: 0;
+  size: letter;
+}
+
+@media print {
+  /* Hide everything except the resume preview */
+  nav,
+  .resume-builder-header,
+  .resume-builder-form {
+    display: none !important;
+  }
+
+  .resume-builder {
+    min-height: auto !important;
+    background: white !important;
+  }
+
+  .resume-builder > div {
+    max-width: none !important;
+  }
+
+  .resume-builder-preview {
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    background: white !important;
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .resume-preview-container {
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+}

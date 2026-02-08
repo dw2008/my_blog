@@ -9,6 +9,7 @@ import { ProtectedRoute } from './components/admin/ProtectedRoute';
 import { AdminDashboard } from './pages/admin/AdminDashboard';
 import { CreatePost } from './pages/admin/CreatePost';
 import { EditPost } from './pages/admin/EditPost';
+import { ResumeBuilder } from './pages/tools/ResumeBuilder';
 
 export function App() {
   return <BrowserRouter>
@@ -19,6 +20,7 @@ export function App() {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/me" element={<MePage />} />
+          <Route path="/tools/resume-builder" element={<ResumeBuilder />} />
           <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
           <Route path="/admin/create" element={<ProtectedRoute><CreatePost /></ProtectedRoute>} />
           <Route path="/admin/edit/:slug" element={<ProtectedRoute><EditPost /></ProtectedRoute>} />
